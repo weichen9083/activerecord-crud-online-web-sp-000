@@ -20,7 +20,11 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
+<<<<<<< HEAD
   movie = Movie.create(attributes)
+=======
+  movie = Movie.new(attributes)
+>>>>>>> 582ef324a3e122a8d724d4cb16c66791a29bb386
 end
 
 def can_be_created_in_a_block(args = { :title => "Home Alone", :release_date => 1990})
@@ -28,17 +32,29 @@ def can_be_created_in_a_block(args = { :title => "Home Alone", :release_date => 
    #release_date = 1990
   
   Movie.create do |m|
+<<<<<<< HEAD
     m.title = args[:title]
     m.release_date = args[:release_date]
+=======
+  m.title = "Home Alone"
+>>>>>>> 582ef324a3e122a8d724d4cb16c66791a29bb386
   end
 end
 
 def can_get_the_first_item_in_the_database
+<<<<<<< HEAD
     Movie.first
 end
 
 def can_get_the_last_item_in_the_database
     Movie.last
+=======
+    Movie.first.title 
+end
+
+def can_get_the_last_item_in_the_database
+    Movie.last.title 
+>>>>>>> 582ef324a3e122a8d724d4cb16c66791a29bb386
 end
 
 def can_get_size_of_the_database
